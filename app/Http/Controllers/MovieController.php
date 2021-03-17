@@ -52,7 +52,12 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-      
+      $film = Movie::find($id);
+
+      $data = [
+        'video' => $film
+      ];
+      return view('movies.show', $data);
     }
 
     /**
