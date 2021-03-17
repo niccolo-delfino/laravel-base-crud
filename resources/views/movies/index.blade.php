@@ -8,9 +8,9 @@ ciao sono l'elenco dei film
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Titolo</th>
+      <th scope="col">Regista</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
