@@ -19,7 +19,7 @@ ciao sono l'elenco dei film
       <th scope="row">{{ $video->id }}</th>
       <td>{{ $video->titolo }}</td>
       <td>{{ $video->regista }}</td>
-      <td><a href="#">dettagli</a></td>
+      <td><a href="{{ route('movies.show', ['movie' => $video->id])}}">dettagli</a></td>
     </tr>
     @endforeach
   </tbody>
