@@ -44,9 +44,10 @@ class MovieController extends Controller
       $data = $request->all();
 
       $movieNew = new Movie();
-      $movieNew->titolo = $data['titolo'];
-      $movieNew->regista = $data['regista'];
-      $movieNew->protagonista = $data['protagonista'];
+      // $movieNew->titolo = $data['titolo'];
+      // $movieNew->regista = $data['regista'];
+      // $movieNew->protagonista = $data['protagonista'];
+      $movieNew->fill($data);
 
       $movieNew->save();
 
