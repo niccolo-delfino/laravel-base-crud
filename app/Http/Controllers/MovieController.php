@@ -49,6 +49,8 @@ class MovieController extends Controller
       $movieNew->protagonista = $data['protagonista'];
 
       $movieNew->save();
+
+      return redirect()->route('movies.index');
     }
 
     /**
