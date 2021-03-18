@@ -5,7 +5,7 @@
 <h1>Inserisci un film</h1>
 
 <div class="container">
-  <form method="post">
+  <form method="post" action="{{route('movies.store')}}">
     @method('POST')
     @csrf
   <div class="form-group">
