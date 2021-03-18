@@ -30,7 +30,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+      return view('movies.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class MovieController extends Controller
     public function show($id)
     {
       $film = Movie::find($id);
-      
+
       if ($film) {
 
         $data = [

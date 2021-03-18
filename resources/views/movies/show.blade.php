@@ -2,7 +2,7 @@
 @section('title','film')
 
 @section('content')
-ciao sono l'elenco dei film
+<h1>ciao sono il dettaglio dei film</h1>
 
 <table class="table">
   <thead>
