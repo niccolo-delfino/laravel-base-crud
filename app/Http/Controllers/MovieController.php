@@ -43,6 +43,12 @@ class MovieController extends Controller
     {
       $data = $request->all();
 
+      $request->validate([
+        'titolo' => 'required | unique:movies',
+        'regista' => 'required | unique:movies',
+        'protagonista' => 'required | unique:movies'
+      ]);
+
       $movieNew = new Movie();
       // $movieNew->titolo = $data['titolo'];
       // $movieNew->regista = $data['regista'];
