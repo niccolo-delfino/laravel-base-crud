@@ -6,8 +6,8 @@
 
 
 <div class="container">
-  <form method="post" action="">
-    @method('POST')
+  <form method="post" action="{{ route('movies.update', $video->id)}}">
+    @method('PUT')
     @csrf
   <div class="form-group">
     <label for="inputFilm">Titolo</label>
@@ -21,7 +21,7 @@
     <label for="inputProtagonista">Protagonista</label>
     <input type="text" class="form-control" name="protagonista" id="inputProtagonista" value="{{$video->protagonista}}">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Modifica</button>
 </form>
 </div>
 @endsection
