@@ -23,6 +23,11 @@
       <td>
         <a href="{{ route('movies.show', ['movie' => $video->id])}}" class="btn btn-info">dettagli</a>
         <a href="{{ route('movies.edit', ['movie' => $video->id])}}" class="btn btn-warning">modifica</a>
+        <form  action="{{ route('movies.destroy', $video->id)}}" method="post" class="d-inline-block">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger">Delete</button>
+        </form>
       </td>
     </tr>
     @endforeach
