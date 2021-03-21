@@ -66,20 +66,35 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Movie $movie)
     {
-      $film = Movie::find($id);
 
-      if ($film) {
+      // $film = Movie::find($id);
+
+      if ($movie) {
 
         $data = [
-          'video' => $film
+          'video' => $movie
         ];
         return view('movies.show', $data);
       }
 
       abort('404');
     }
+    // public function show($id)
+    // {
+    //   $film = Movie::find($id);
+    //
+    //   if ($film) {
+    //
+    //     $data = [
+    //       'video' => $film
+    //     ];
+    //     return view('movies.show', $data);
+    //   }
+    //
+    //   abort('404');
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -87,9 +102,17 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Movie $movie)
     {
-        //
+      if ($movie) {
+
+        $data = [
+          'video' => $movie
+        ];
+        return view('movies.edit', $data);
+      }
+
+      abort('404');
     }
 
     /**
